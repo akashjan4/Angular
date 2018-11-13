@@ -1,1 +1,24 @@
-<h1>Server component is <i class="blink text-success">live</i></h1>
+<div class="row">
+    <div class="col-xs-6">
+        <h3 [ngClass]="isServerLive() ? 'text-success' : 'text-danger'">
+            Server IP: {{ serverIp }}
+        </h3>
+        <div class="input-group col-xs-6">
+            <input type="text" class=" form-control" [(ngModel)]="serverIp" [disabled]="isServerLive()">
+            <span class="input-group-btn">
+                <button type="button" class="btn" [ngClass]="!isServerLive() ? 'btn-primary' : 'btn-danger'" (click)="toggleServerStatus()">{{
+                    !isServerLive() ? "Start" : "Stop" }} Server</button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-6">
+        <h3>Status live:
+            <i class="blink" [ngClass]="isServerLive() ? 'text-success' : 'text-danger'">
+                {{ isServerLive() ? "LIVE" : "OFFLINE"}}
+            </i>
+        </h3>
+    </div>
+</div>
