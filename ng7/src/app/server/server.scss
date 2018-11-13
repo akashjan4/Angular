@@ -1,0 +1,18 @@
+$blinkcount: 0;
+$contentText: "";
+.blink {
+    animation: blinker 1s infinite; // counter-reset: $blinkcount;
+    &::after {
+        content: "...";
+        color: inherit;
+        font-weight: bold;
+        font-size: 2em;
+        animation: blinker 2s infinite;
+    }
+}
+
+@keyframes blinker {
+    to {
+        color: transparent;
+    }
+}
