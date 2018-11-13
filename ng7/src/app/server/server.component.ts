@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-server', // as element
@@ -8,6 +8,18 @@ import { Component } from '@angular/core';
     styleUrls: ['./server.scss']
 })
 
-export class ServerComponent {
+export class ServerComponent implements OnInit{
+    serverIp = '127.22.12.1';
+    serverStatus = true;
 
+    ngOnInit() {
+    }
+
+    isServerLive() {
+        return this.serverStatus;
+    }
+
+    switchServerStatus() {
+        this.serverStatus = !this.serverStatus;
+    }
 }

@@ -1,13 +1,13 @@
 $blinkcount: 0;
 $contentText: "";
 .blink {
-    animation: blinker 1s infinite; // counter-reset: $blinkcount;
+    animation: blinker 1.5s infinite; // counter-reset: $blinkcount;
     &::after {
-        content: "...";
+        content: " ...";
         color: inherit;
         font-weight: bold;
         font-size: 2em;
-        animation: blinker 2s infinite;
+        animation: blinker 2.5s infinite;
     }
 }
 
