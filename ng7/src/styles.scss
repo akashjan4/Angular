@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+$default-background: #c7c2c2;
+$container-background: rgb(173, 167, 167);
+
+body {
+    background-color: $default-background;
+}
+
+.container {
+    background-color: $container-background;
+    height: 100vh;
+}
