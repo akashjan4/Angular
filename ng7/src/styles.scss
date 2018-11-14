@@ -1,12 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 $default-background: #c7c2c2;
-$container-background: rgb(173, 167, 167);
+$container-background: #f5f5f5;
 
 body {
     background-color: $default-background;
+    .pad-0 {
+        padding: 0;
+    }
+    .mrg-0 {
+        margin: 0;
+    }
+    .seprator {
+        border-top: 1px solid black;
+        padding: 5px;
+    }
+    .container {
+        background-color: $container-background;
+        height: 100vh;
+    }
 }
 
-.container {
-    background-color: $container-background;
-    height: 100vh;
-}
+

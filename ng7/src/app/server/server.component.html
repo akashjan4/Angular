@@ -4,21 +4,37 @@
             Server IP: {{ serverIp }}
         </h3>
         <div class="input-group col-xs-6">
-            <input type="text" class=" form-control" [(ngModel)]="serverIp" [disabled]="isServerLive()">
+            <input type="text" class="form-control" [(ngModel)]="serverIp" [disabled]="isServerLive()">
             <span class="input-group-btn">
-                <button type="button" class="btn" [ngClass]="!isServerLive() ? 'btn-primary' : 'btn-danger'" (click)="toggleServerStatus()">{{
-                    !isServerLive() ? "Start" : "Stop" }} Server</button>
+                <button type="button" class="btn" [ngClass]="!isServerLive() ? 'btn-success' : 'btn-danger'" (click)="switchServerStatus()">{{
+                    !isServerLive() ? "Start" : "Stop" }}/Retry Server</button>
             </span>
         </div>
+        <div *ngIf="isServerLive()" class="text-danger">
+            <h3>Warning !</h3>
+            <h4>
+                DO NOT publish when server in live and runnig. Please stop the server to publish.
+            </h4>
+        </div>
+    </div>
+    <div class="col-xs-3">
+        <h3>Server Details</h3>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let server of serverList">
+                <p>{{ server.name}}</p>
+                <p>{{ server.location }} </p> 
+                <b>{{ server.ip }}</b>
+            </li>
+        </ul>
     </div>
 </div>
 
 <div class="row">
     <div class="col-xs-6">
-        <h3>Status live:
-            <i class="blink" [ngClass]="isServerLive() ? 'text-success' : 'text-danger'">
-                {{ isServerLive() ? "LIVE" : "OFFLINE"}}
+        <h4>Status:
+            <i class="" [ngClass]="isServerLive() ? ['text-success','blink'] : 'text-danger'">
+                {{ isServerLive() ? "On-line" : "off-line"}}
             </i>
-        </h3>
+        </h4>
     </div>
 </div>
