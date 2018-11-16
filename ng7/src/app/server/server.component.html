@@ -20,8 +20,11 @@
     <div class="col-xs-3">
         <h3>Server Details</h3>
         <ul class="list-group">
-            <li class="list-group-item" *ngFor="let server of serverList">
-                <p>{{ server.name}}</p>
+            <li class="list-group-item" *ngFor="let server of serverList; let $index = index">
+               <b>
+                    {{ $index+1 }}: 
+               </b>
+               <p>{{ server.name}}</p>
                 <p>{{ server.location }} </p> 
                 <b>{{ server.ip }}</b>
             </li>
