@@ -10,6 +10,9 @@ import { WatchListComponent } from './watch-list/watch-list.component';
 import { TrendingComponent } from './trending/trending.component';
 import { SearchComponent } from './search/search.component';
 import { AboutComponent } from './about/about.component';
+import { WatchListService } from './watch-list/service /watch-list.service';
+import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './shared/card/card.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,15 @@ import { AboutComponent } from './about/about.component';
     WatchListComponent,
     TrendingComponent,
     SearchComponent,
-    AboutComponent
+    AboutComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [WatchListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

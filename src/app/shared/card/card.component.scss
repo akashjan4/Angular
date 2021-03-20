@@ -1,0 +1,57 @@
+$padding: 16px 8px;
+$frosted-background: #0000006b;
+$text-color: #fff;
+
+.card {
+  height: 292px;
+  width: 236px;
+  border-radius: 4px;
+  border: 1px solid #000;
+  background: #fff;
+  .header {
+    background: $frosted-background;
+    color: $text-color;
+    font-size: 24px;
+    font-weight: bold;
+    padding: $padding;
+    text-align: center;
+  }
+  .body {
+    padding: $padding;
+    color: $text-color;
+    background: $frosted-background;
+    height: calc(292px - 128px);
+    overflow: hidden;
+  }
+  .footer {
+    background: $frosted-background;
+    padding: $padding;
+    color: $text-color;
+  }
+}
+
+.hero-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.card {
+    position: relative;
+    .top-bottom {
+      position: absolute;
+      width: 94%;
+    }
+    .header {
+      @extend .top-bottom;
+      top:0;
+    }
+    .body {
+      top: 48px;
+      position: absolute;
+      height: calc(292px - 128px);
+    }
+    .footer {
+      @extend .top-bottom;
+      bottom: 0;
+    }
+  }
+}

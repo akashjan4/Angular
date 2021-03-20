@@ -1,1 +1,16 @@
-<p>watch-list works!</p>
+<div class="movie-list">
+  <app-card [backgroundImage]="movie.Poster" *ngFor="let movie of movieList">
+    <div header>
+      {{movie.Title}}
+    </div>
+    <div body>
+      {{movie.Plot}}
+      <div class="mt-1" *ngFor="let rating of movie.Ratings">
+        {{rating.Source}} - {{rating.Value}}
+      </div>
+    </div>
+    <div footer>
+      {{movie.Runtime}}
+    </div>
+  </app-card>
+</div>
