@@ -1,4 +1,32 @@
+@use '../../styles/variables';
+
 .movie-list {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header-image {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnviLMAi_29i9hMamRWxi5eD1hxRKnA4fw7w&usqp=CAU');
+  background-size: cover;
+}
+
+.card-v2 {
+  display: flex;
+  padding: variables.$pad-marg;
+  max-width: 374px;
+  img {
+    height: 300px;
+  }
+}
+
+.las {
+  font-size: 36px;
+  color: variables.$primary;
+  position: relative;
+  text-align: center;
+
 }

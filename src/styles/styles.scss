@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:wght@100;500&display=swap');
+@import './variables';
+@import './button';
+
 *{
   margin:0;
   padding: 0;
@@ -13,7 +16,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #333;
+  color: $primary;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

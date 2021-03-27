@@ -1,0 +1,66 @@
+@use '../../../styles/variables';
+
+$header-size: 40px;
+$box-shadow: 2px 4px 2px 1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+
+.card {
+    background: variables.$secondary;
+    padding: variables.$pad-marg;
+    box-shadow: $box-shadow;
+}
+
+.card-avatar {
+    height: $header-size;
+    width: $header-size;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+}
+.card-header {
+    display: flex;
+    flex-direction: row;
+    .card-header-text {
+        margin: 0 variables.$pad-marg;
+    }
+
+
+    .header-title {
+        font-size: 20px;
+        display: block;
+    }
+
+    .header-sub-title {
+        color: rgba(0,0,0,.54);
+        display: block;
+        font-size: 14px;
+        display: block;
+        &:last-child {
+            margin-bottom: variables.$pad-marg;
+        }
+    }
+}
+
+.card-image {
+    width: calc(100% + #{variables.$pad-marg * 2});
+    height: calc(100% - #{variables.$pad-marg * 2});
+    margin: 0 (- variables.$pad-marg) variables.$pad-marg (- variables.$pad-marg);
+}
+
+.card-content {
+    display: block;
+    margin-bottom: variables.$pad-marg;
+    overflow: hidden;
+}
+
+.card-actions {
+    margin-left: - variables.$pad-marg/2;
+    margin-right: - variables.$pad-marg/2;
+    padding: variables.$pad-marg/2 0;
+}

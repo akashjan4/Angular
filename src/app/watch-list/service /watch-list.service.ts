@@ -9,7 +9,17 @@ import { WatchList } from '../watch-list';
 export class WatchListService {
 
   constructor(private httpClient: HttpClient) { }
-  private watchList = ['the mask', 'hello brother', 'Raja hindustani'];
+  private watchList = [
+  'The mask', 
+  'Breaking bad', 
+  'Better call saul', 
+  'Mad max fury',
+  '3 idiots',
+  'Star Wars: Episode IV - A New Hope',
+  'Back to the future', 
+  'John wick',
+  'zack snyder\'s justice league'
+  ];
 
   public getWatchList(): Observable<WatchList[]>{
     const listSubscription:Array<Observable<WatchList>> = [];

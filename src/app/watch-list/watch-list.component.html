@@ -1,16 +1,50 @@
-<div class="movie-list">
-  <app-card [backgroundImage]="movie.Poster" *ngFor="let movie of movieList">
-    <div header>
-      {{movie.Title}}
-    </div>
-    <div body>
-      {{movie.Plot}}
-      <div class="mt-1" *ngFor="let rating of movie.Ratings">
-        {{rating.Source}} - {{rating.Value}}
-      </div>
-    </div>
-    <div footer>
-      {{movie.Runtime}}
-    </div>
-  </app-card>
-</div>
+<ul class="movie-list">
+  <li class="card-v2" *ngFor="let movie of movieList">
+    <app-card-v2>
+      <app-card-header>
+        <div avatar class="las"
+          [ngClass]="{ 'la-video': movie.Type =='movie' , 'la-photo-video': movie.Type =='series'}"></div>
+        <header-title> {{movie.Title}} </header-title>
+        <header-sub-title>
+          Release Date: {{movie.Released}}
+        </header-sub-title>
+        <header-sub-title>
+          Run Time: {{movie.Runtime}}
+        </header-sub-title>
+      </app-card-header>
+      <img card-image [src]="movie.Poster" [alt]="movie.Title">
+      <card-content>
+        <p>
+          {{movie.Plot}}
+        </p>
+      </card-content>
+      <card-actions>
+        <button class="clear-button">LIKE</button>
+        <button class="clear-button">SHARE</button>
+      </card-actions>
+    </app-card-v2>
+  </li>
+  <li class="card-v2">
+    <app-card-v2>
+      <app-card-header>
+        <div avatar class="header-image"></div>
+        <header-title>Labrador</header-title>
+        <header-sub-title>Good Boi 🐶</header-sub-title>
+      </app-card-header>
+      <img card-image src="https://www.dogsforgood.org/app/uploads/2013/02/Labrador1.jpg" alt="Photo of a Shiba Inu">
+      <card-content>
+        <p>
+          The Labrador is a member of the gun dog group, which was originally bred to find and retrieve shot game. This
+          means Labradors are often highly motivated to hold objects. From a young age they will pick up and carry their
+          toys. This natural desire to retrieve is particularly useful for anyone who needs help to pick things up at
+          home
+          or retrieve important items like the phone.
+        </p>
+      </card-content>
+      <card-actions>
+        <button class="clear-button">LIKE</button>
+        <button class="clear-button">SHARE</button>
+      </card-actions>
+    </app-card-v2>
+  </li>
+</ul>

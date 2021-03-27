@@ -1,32 +1,32 @@
-$padding: 16px 8px;
-$frosted-background: #0000006b;
-$text-color: #fff;
+@use '../../../styles/variables';
+
+$frosted-background: $primary0006b;
 
 .card {
   height: 292px;
   width: 236px;
   border-radius: 4px;
-  border: 1px solid #000;
-  background: #fff;
+  border: 1px solid variables.$primary;
+  background: $secondary;
   .header {
     background: $frosted-background;
-    color: $text-color;
+    color: variables.$primary;
     font-size: 24px;
     font-weight: bold;
-    padding: $padding;
+    padding: variables.$padding;
     text-align: center;
   }
   .body {
-    padding: $padding;
-    color: $text-color;
+    padding: variables.$padding;
+    color: variables.$primary;
     background: $frosted-background;
     height: calc(292px - 128px);
     overflow: hidden;
   }
   .footer {
     background: $frosted-background;
-    padding: $padding;
-    color: $text-color;
+    padding: variables.$padding;
+    color: variables.$primary;
   }
 }
 

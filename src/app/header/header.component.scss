@@ -1,13 +1,16 @@
+@use '../../styles/variables';
+
 nav.top-navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 42px;
-    background-color: #fff;
+    height: variables.$header-height;
+    background-color: variables.$primary;
     border-bottom: 1px solid #d2d2d2;
     align-items: center;
     font-weight: bold;
     overflow: hidden;
+    color: variables.$secondary;
     a {
         text-decoration: none;
         color:inherit;
@@ -24,7 +27,7 @@ nav.top-navigation {
                 display: block;
                 width: inherit;
                 height: 2px;
-                background-color: blue;
+                background-color: rgba(variables.$primary, 80%);
                 position: relative;
                 top: 30px;
             }
