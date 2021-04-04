@@ -14,6 +14,7 @@ import { WatchListService } from './watch-list/service /watch-list.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './shared/card/card.component';
 import { CardV2Module } from './shared/card-v2';
+import { ButtonModule } from './shared/button';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CardV2Module } from './shared/card-v2';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CardV2Module
+    CardV2Module,
+    ButtonModule
   ],
   providers: [WatchListService],
   bootstrap: [AppComponent]
