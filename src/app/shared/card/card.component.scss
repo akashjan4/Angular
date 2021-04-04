@@ -1,23 +1,23 @@
 @use '../../../styles/variables';
 
-$frosted-background: $primary0006b;
+$frosted-background: #0000006b;
 
 .card {
   height: 292px;
   width: 236px;
   border-radius: 4px;
   border: 1px solid variables.$primary;
-  background: $secondary;
+  background: variables.$secondary;
   .header {
     background: $frosted-background;
     color: variables.$primary;
     font-size: 24px;
     font-weight: bold;
-    padding: variables.$padding;
+    padding: variables.$pad-marg;
     text-align: center;
   }
   .body {
-    padding: variables.$padding;
+    padding: variables.$pad-marg;
     color: variables.$primary;
     background: $frosted-background;
     height: calc(292px - 128px);
@@ -25,7 +25,7 @@ $frosted-background: $primary0006b;
   }
   .footer {
     background: $frosted-background;
-    padding: variables.$padding;
+    padding: variables.$pad-marg;
     color: variables.$primary;
   }
 }

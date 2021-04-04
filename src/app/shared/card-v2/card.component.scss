@@ -59,6 +59,11 @@ $box-shadow: 2px 4px 2px 1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1
     overflow: hidden;
 }
 
+.card-footer {
+    display: block;
+    bottom: - variables.$pad-marg;
+}
+
 .card-actions {
     margin-left: - variables.$pad-marg/2;
     margin-right: - variables.$pad-marg/2;

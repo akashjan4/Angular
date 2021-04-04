@@ -27,17 +27,6 @@ export class CardV2Component implements OnInit {
 })
 export class CardHeader {}
 
-
-@Component({
-  selector: 'card-footer',
-  templateUrl: 'card-footer.html',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {'class': 'card-footer'}
-})
-export class CardFooter {}
-
-
 @Directive({
   selector: '[avatar]',
   host: {'class': 'card-avatar'}
@@ -67,6 +56,12 @@ export class CardImage {}
   host: {'class': 'card-content'}
 })
 export class CardContent {}
+
+@Directive({
+  selector: 'card-footer',
+  host: {'class': 'card-footer'}
+})
+export class CardFooter {}
 
 @Directive({
   selector: 'card-actions, [card-actions], [CardActions]',

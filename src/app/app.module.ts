@@ -13,7 +13,6 @@ import { AboutComponent } from './about/about.component';
 import { WatchListService } from './watch-list/service /watch-list.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './shared/card/card.component';
-import { StoreModule } from '@ngrx/store';
 import { CardV2Module } from './shared/card-v2';
 
 @NgModule({
@@ -32,7 +31,6 @@ import { CardV2Module } from './shared/card-v2';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
     CardV2Module
   ],
   providers: [WatchListService],
