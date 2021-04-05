@@ -16,6 +16,7 @@ import { CardComponent } from './shared/card/card.component';
 import { CardV2Module } from './shared/card-v2';
 import { ButtonModule } from './shared/button';
 import { TooltipDirective } from './shared/tooltip.directive';
+import { MinutesToHoursPipe } from './shared/pipes/minToHours.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TooltipDirective } from './shared/tooltip.directive';
     SearchComponent,
     AboutComponent,
     CardComponent,
-    TooltipDirective
+    TooltipDirective,
+    MinutesToHoursPipe
   ],
   imports: [
     BrowserModule,

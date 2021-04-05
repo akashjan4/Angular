@@ -8,7 +8,7 @@
         <header-sub-title >
           Release Date: {{movie.Released}}
         </header-sub-title>
-        <header-sub-title appTooltip [text]='movie.Runtime'>
+        <header-sub-title appTooltip [text]='movie.Runtime| toTime | uppercase'>
           Run Time: {{movie.Runtime}}
         </header-sub-title>
       </app-card-header>
