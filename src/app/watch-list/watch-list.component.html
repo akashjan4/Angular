@@ -1,10 +1,32 @@
-<button>Hello, I'm button</button>
-<button id="btn">Hello, I'm button #id</button>
-<button class="btn">Hello, I'm button .class</button>
 <ul class="movie-list">
-  <li class="card-v2">
+  <li class="card-v2" *ngFor="let movie of movieList">
     <app-card-v2>
       <app-card-header>
+        <div avatar class="las"
+          [ngClass]="{ 'la-video': movie.Type =='movie' , 'la-photo-video': movie.Type =='series'}"></div>
+        <header-title> {{movie.Title}} </header-title>
+        <header-sub-title >
+          Release Date: {{movie.Released}}
+        </header-sub-title>
+        <header-sub-title appTooltip [text]='movie.Runtime'>
+          Run Time: {{movie.Runtime}}
+        </header-sub-title>
+      </app-card-header>
+      <img card-image [src]="movie.Poster" [alt]="movie.Title">
+      <card-content>
+        <p>
+          {{movie.Plot}}
+        </p>
+      </card-content>
+      <card-actions>
+        <button class="clear-button">LIKE</button>
+        <button class="clear-button">SHARE</button>
+      </card-actions>
+    </app-card-v2>
+  </li>
+  <li class="card-v2">
+    <app-card-v2>
+      <app-card-header appTooltip text='Good Boi 🐕'>
         <div avatar class="header-image"></div>
         <header-title>Labrador</header-title>
         <header-sub-title>Good Boi 🐶</header-sub-title>
@@ -17,34 +39,6 @@
           toys. This natural desire to retrieve is particularly useful for anyone who needs help to pick things up at
           home
           or retrieve important items like the phone.
-        </p>
-      </card-content>
-      <card-actions>
-        <button class="clear-button">LIKE</button>
-        <button class="clear-button">SHARE</button>
-        <app-button>In card </app-button>
-        <app-button id="btn">In card, #id</app-button>
-        <app-button class="btn">In card, .class</app-button>
-      </card-actions>
-    </app-card-v2>
-  </li>
-  <li class="card-v2" *ngFor="let movie of movieList">
-    <app-card-v2>
-      <app-card-header>
-        <div avatar class="las"
-          [ngClass]="{ 'la-video': movie.Type =='movie' , 'la-photo-video': movie.Type =='series'}"></div>
-        <header-title> {{movie.Title}} </header-title>
-        <header-sub-title>
-          Release Date: {{movie.Released}}
-        </header-sub-title>
-        <header-sub-title>
-          Run Time: {{movie.Runtime}}
-        </header-sub-title>
-      </app-card-header>
-      <img card-image [src]="movie.Poster" [alt]="movie.Title">
-      <card-content>
-        <p>
-          {{movie.Plot}}
         </p>
       </card-content>
       <card-actions>

@@ -18,7 +18,6 @@ export class WatchListComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.watchListService.getWatchList().subscribe(response => {
-      console.table(response)
       this.movieList = response
     })
   }

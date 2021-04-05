@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './shared/card/card.component';
 import { CardV2Module } from './shared/card-v2';
 import { ButtonModule } from './shared/button';
+import { TooltipDirective } from './shared/tooltip.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ButtonModule } from './shared/button';
     TrendingComponent,
     SearchComponent,
     AboutComponent,
-    CardComponent
+    CardComponent,
+    TooltipDirective
   ],
   imports: [
     BrowserModule,
