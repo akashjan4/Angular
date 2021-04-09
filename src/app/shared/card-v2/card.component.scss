@@ -4,7 +4,7 @@ $header-size: 40px;
 $box-shadow: 2px 4px 2px 1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
 
 .card {
-    background: variables.$secondary;
+    background: rgba(variables.$secondary, 0.50);
     padding: variables.$pad-marg;
     box-shadow: $box-shadow;
 }
@@ -37,7 +37,7 @@ $box-shadow: 2px 4px 2px 1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1
     }
 
     .header-sub-title {
-        color: rgba(0,0,0,.54);
+        color: variables.$secondary;
         display: block;
         font-size: 14px;
         display: block;

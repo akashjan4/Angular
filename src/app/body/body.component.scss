@@ -6,4 +6,5 @@ $padding: variables.$pad-marg;
   $r: variables.$header-height + variables.$footer-height;
   min-height: calc(100vh - #{$r});
   padding: variables.$footer-height ;
+  color: variables.$secondary;
 }
