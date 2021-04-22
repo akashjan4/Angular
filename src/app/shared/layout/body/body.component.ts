@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
-  styleUrls: ['./body.component.scss']
+  styleUrls: ['./body.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BodyComponent implements OnInit {
 

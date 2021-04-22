@@ -1,0 +1,8 @@
+<nav class="top-navigation">
+  <ul>
+    <li *ngFor="let navItem of navItems; trackBy: trackByFn">
+      <a [id]="navItem.id" [routerLinkActive]="getNavActiveClass(navItem)"
+        [routerLink]="getNavLink(navItem)" (click)="navClicked($event, navItem)">{{navItem.text}}</a>
+    </li>
+  </ul>
+</nav>
