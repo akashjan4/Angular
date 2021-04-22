@@ -1,8 +1,0 @@
-<nav class="top-navigation">
-    <ul>
-        <li *ngFor="let navItem of navItems">
-            <a id="navItem.id" *ngIf="isAuthenticated" [routerLinkActive]="getNavActiveClass(navItem)" [routerLink]="getNavLink(navItem)"
-                (click)="navClicked($event, navItem)">{{navItem.text}}</a>
-        </li>
-    </ul>
-</nav>

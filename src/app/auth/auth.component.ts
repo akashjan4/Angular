@@ -27,7 +27,7 @@ export class AuthComponent implements OnInit {
       this.showSpinner = false;
       this.isLoginMode = false;
       this.authService.user.next(token)
-      this.router.navigate(['/watch-list'])
+      this.router.navigate(['/movie-app'])
       sessionStorage.setItem('token', JSON.stringify(token))
     }, (e) => {
       console.error(e);
